@@ -75,7 +75,7 @@ def get_density(dist):
     return np.random.uniform(n1, n2)
 
 def getDumpRate(years):
-    dumping_R = 1.956*math.exp(0.0428*years)
+    dumping_R = 1.956352*math.exp(0.0428*years)
     return dumping_R
 
 def get_percent():
@@ -111,7 +111,6 @@ def addBall():
         if plastic.density > ocean_density:
             plastic.shapesize(1.75)
         else:
-            print(plastic.density)
             plastic.shapesize(0.75)
     else:
         plastic.shapesize(plastics_dict[plastic.ptype][3])
